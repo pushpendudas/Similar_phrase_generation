@@ -1,3 +1,3 @@
-# Similar Phrase Generation using glove, NLTK and Spacy
+# Similar Phrase Generation using glove, NLTK, Spacy Flask
 
-# Architechture
+## Architechture
