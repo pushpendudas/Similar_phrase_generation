@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Output Similar Phrase Generation</title>
+<script>document.createElement("myHero")</script>
+<style>
+body {
+	background-color:rgba(141, 208, 249, 1.0)
+}
+
+myHero {
+  display: block;
+  background-color: #dddddd;
+  padding: 50px;
+  font-size: 30px;
+}
+
+#d_times{
+	font-size: 20px;
+	text-align:center;
+	font-family: Calibri;
+	font-style: normal;
+	color:rgba(0, 0, 0, 1.0);
+}
+
+#myHeader {
+	background-color:PowderBlue;
+	color:MediumSeaGreen;
+	text-align:center;
+	border: 2px solid DodgerBlue;
+	font-family: Algerian;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#sample_phrases{
+	font-size: 20px;
+	text-align:center;
+	font-family: Calibri;
+	font-style: normal;
+	color:rgba(0, 0, 0, 1.0);
+}
+
+
+/* Style all elements with the class name "city" */
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+
+h6 {
+	text-align:center;
+	font-size: 15px;
+}
+
+h3 {
+/*	background-color:rgba(238, 178, 42, 1.0); */
+	color:rgba(0, 0, 255, 1.0);
+	background-color: lightgrey;
+	width: 900px;
+	border: 15px solid green;
+	padding: 15px;
+	margin: 100px;
+	text-align:Center;
+	font-family: Calibri;
+	font-style: italic;
+	font-size:25px;	
+
+}
+
+#info_details {
+	color:rgba(0, 0, 255, 1.0);
+	text-align:center;
+	font-family: Ink Free;
+	font-style: italic;
+	font-size:35px;  
+}
+
+h4 {
+	text-align:center;
+}
+
+#contact_details{
+	text-align:right;
+	font-family: Calibri;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold;
+	color:rgba(0, 0, 255, 1.0);
+}
+
+table {
+	border-collapse: collapse;
+	text-align:center;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+#customers {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 50%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+#customers tr {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1.0);
+  color: rgba(0, 0, 255, 1.0);
+}
+
+address {
+	color: rgba(0, 0, 255, 1.0);
+	text-align: right
+}
+
+</style>
+</head>
+
+
+
+<body>
+
+<h1 id="myHeader">Similar Phrase Generation
+</h1>
+
+<p id = "d_times">
+<br>
+<button type="button"
+onclick="displayDateTime()">
+Show Date and Time.</button>
+
+<script>
+function displayDateTime() {
+	document.getElementById('date_time_display').innerHTML = Date()
+	document.getElementById("date_time_display").style.color = "blue";
+}
+</script>
+
+<br>
+<d_t id="date_time_display"> </d_t>
+<br>
+</p>
+
+<h6> Get my code details here
+<button onclick="document.location = 'https://github.com/pushpendudas'">Visit my github link 
+</button>
+</h6>
+
+<p id = "info_details"><mark> Please provide me a 
+<abbr title="for Generation of similar Phrase"><q>Phrase</q> </abbr> . 
+<br> Let me know, if have any trouble 
+</mark>
+</p>
+
+<p id="contact_details">
+write pushpendu.das1112@gmail.com
+</p>
+
+<p id="sample_phrases">
+Origianl Phrase
+
+<button onclick="displayResult()">
+Generate Similar Phrases
+</button>
+<br>
+<script>
+function displayResult() {
+  document.getElementById("sample_p").innerHTML = "Similar Phrases!";
+  document.getElementById("sample_p").style.color = "green";
+}
+</script>
+<pr id="sample_p"> </pr>
+</p>
+
+
+
+<h3>
+Original Sentence : {% for key, _ in result.items() %}
+                        {{ key }}
+                    {% endfor %}
+</h3>
+
+<table id="customers" class="center">
+  <tr>
+    <th>Similar Sentences</th>
+    <th>Similarity(%)</th>
+  </tr>
+	{% for _, values in result.items() %}
+        {% for value in values %}
+		<tr>
+			<td> {{ value[0] }} </td>
+			<td> {{ value[1] }} </td>
+		</tr>
+        {% endfor %}
+	{% endfor %}
+</table>
+
+<br>
+
+
+
+
+<address>
+Written by Pushpendu Das.<br> 
+Visit me at: Bangalore<br>
+Site: Example.com<br>
+HSR Layout, Bangalore<br>
+India<br>
+Mail: pushpendu.das1112@gmail.com
+</address>
+
+<!--
+<myHero>My Hero Element
+</myHero>
+
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+</body>
+</html>
+-->

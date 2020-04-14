@@ -1,0 +1,11 @@
+Please follow below steps to get glove.6B.50d.txt
+
+Step 1: Go to below link.
+https://nlp.stanford.edu/projects/glove/
+
+Step 2: Then click on "glove.6B.zip"
+automatically glove.6B.50d.txt will be downloaded.
+
+Step 3: Unzip the downloaded file "glove.6B.zip"
+
+Step 4: Move glove.6B.50d.txt to folder "data"
